@@ -185,6 +185,9 @@
             font-size: 1em;
             margin: 10px 0;
         }
+        #cart-details {
+            margin-top: 20px;
+        }
     </style>
 </head>
 <body>
@@ -222,7 +225,7 @@
         <p>إعلان: عروض خاصة لفترة محدودة!</p>
         <div class="slideshow">
             <img src="images/slide1.png" alt="صورة 1" class="active">
-            <img src="images/slide2.jpg" alt="صورة 2">
+            <img src="images/slide2.png" alt="صورة 2">
             <img src="images/slide3.jpg" alt="صورة 3">
             <img src="images/slide4.jpeg" alt="صورة 4">
         </div>
@@ -255,22 +258,22 @@
             <div class="product">
                 <img src="images/men1.jpg" alt="منتج الرجال 1">
                 <h3>منتج الرجال 1</h3>
-                <a href="#" class="btn">شراء</a>
+                <a href="#" class="btn" onclick="addToCart('منتج الرجال 1')">شراء</a>
             </div>
             <div class="product">
                 <img src="images/men2.jpg" alt="منتج الرجال 2">
                 <h3>منتج الرجال 2</h3>
-                <a href="#" class="btn">شراء</a>
+                <a href="#" class="btn" onclick="addToCart('منتج الرجال 2')">شراء</a>
             </div>
             <div class="product">
                 <img src="images/men3.jpg" alt="منتج الرجال 3">
                 <h3>منتج الرجال 3</h3>
-                <a href="#" class="btn">شراء</a>
+                <a href="#" class="btn" onclick="addToCart('منتج الرجال 3')">شراء</a>
             </div>
             <div class="product">
                 <img src="images/men4.jpg" alt="منتج الرجال 4">
                 <h3>منتج الرجال 4</h3>
-                <a href="#" class="btn">شراء</a>
+                <a href="#" class="btn" onclick="addToCart('منتج الرجال 4')">شراء</a>
             </div>
         </div>
     </section>
@@ -282,22 +285,22 @@
             <div class="product">
                 <img src="images/women1.jpeg" alt="منتج النساء 1">
                 <h3>منتج النساء 1</h3>
-                <a href="#" class="btn">شراء</a>
+                <a href="#" class="btn" onclick="addToCart('منتج النساء 1')">شراء</a>
             </div>
             <div class="product">
                 <img src="images/women2.jpeg" alt="منتج النساء 2">
                 <h3>منتج النساء 2</h3>
-                <a href="#" class="btn">شراء</a>
+                <a href="#" class="btn" onclick="addToCart('منتج النساء 2')">شراء</a>
             </div>
             <div class="product">
                 <img src="images/women3.jpeg" alt="منتج النساء 3">
                 <h3>منتج النساء 3</h3>
-                <a href="#" class="btn">شراء</a>
+                <a href="#" class="btn" onclick="addToCart('منتج النساء 3')">شراء</a>
             </div>
             <div class="product">
                 <img src="images/women4.jpeg" alt="منتج النساء 4">
                 <h3>منتج النساء 4</h3>
-                <a href="#" class="btn">شراء</a>
+                <a href="#" class="btn" onclick="addToCart('منتج النساء 4')">شراء</a>
             </div>
         </div>
     </section>
@@ -309,22 +312,22 @@
             <div class="product">
                 <img src="images/kids1.jpg" alt="منتج الأطفال 1">
                 <h3>منتج الأطفال 1</h3>
-                <a href="#" class="btn">شراء</a>
+                <a href="#" class="btn" onclick="addToCart('منتج الأطفال 1')">شراء</a>
             </div>
             <div class="product">
                 <img src="images/kids2.jpg" alt="منتج الأطفال 2">
                 <h3>منتج الأطفال 2</h3>
-                <a href="#" class="btn">شراء</a>
+                <a href="#" class="btn" onclick="addToCart('منتج الأطفال 2')">شراء</a>
             </div>
             <div class="product">
                 <img src="images/kids3.jpg" alt="منتج الأطفال 3">
                 <h3>منتج الأطفال 3</h3>
-                <a href="#" class="btn">شراء</a>
+                <a href="#" class="btn" onclick="addToCart('منتج الأطفال 3')">شراء</a>
             </div>
             <div class="product">
                 <img src="images/kids4.jpg" alt="منتج الأطفال 4">
                 <h3>منتج الأطفال 4</h3>
-                <a href="#" class="btn">شراء</a>
+                <a href="#" class="btn" onclick="addToCart('منتج الأطفال 4')">شراء</a>
             </div>
         </div>
     </section>
@@ -336,24 +339,30 @@
             <div class="product">
                 <img src="images/home1.jpg" alt="منتج المنزل 1">
                 <h3>منتج المنزل 1</h3>
-                <a href="#" class="btn">شراء</a>
+                <a href="#" class="btn" onclick="addToCart('منتج المنزل 1')">شراء</a>
             </div>
             <div class="product">
                 <img src="images/home2.jpg" alt="منتج المنزل 2">
                 <h3>منتج المنزل 2</h3>
-                <a href="#" class="btn">شراء</a>
+                <a href="#" class="btn" onclick="addToCart('منتج المنزل 2')">شراء</a>
             </div>
             <div class="product">
                 <img src="images/home3.jpg" alt="منتج المنزل 3">
                 <h3>منتج المنزل 3</h3>
-                <a href="#" class="btn">شراء</a>
+                <a href="#" class="btn" onclick="addToCart('منتج المنزل 3')">شراء</a>
             </div>
             <div class="product">
                 <img src="images/home4.jpg" alt="منتج المنزل 4">
                 <h3>منتج المنزل 4</h3>
-                <a href="#" class="btn">شراء</a>
+                <a href="#" class="btn" onclick="addToCart('منتج المنزل 4')">شراء</a>
             </div>
         </div>
+    </section>
+    
+    <section id="cart" class="section">
+        <h2><i class="fas fa-shopping-cart"></i> سلة المشتريات</h2>
+        <div id="cart-details"></div>
+        <button class="btn" onclick="sendCart()">إرسال السلة عبر واتس آب</button>
     </section>
 </div>
 
@@ -369,12 +378,34 @@
 </div>
 
 <script>
+    let cart = [];
+
     function showSection(sectionId) {
         var sections = document.querySelectorAll('.section');
         sections.forEach(function(section) {
             section.classList.remove('active');
         });
         document.getElementById(sectionId).classList.add('active');
+        if (sectionId === 'cart') {
+            updateCartDetails();
+        }
+    }
+
+    function addToCart(productName) {
+        cart.push(productName);
+        alert(productName + ' تمت إضافته إلى السلة.');
+    }
+
+    function updateCartDetails() {
+        const cartDetails = document.getElementById('cart-details');
+        cartDetails.innerHTML = cart.length ? cart.map(item => `<p>${item}</p>`).join('') : '<p>السلة فارغة.</p>';
+    }
+
+    function sendCart() {
+        const phoneNumber = '+967780595958'; // رقم الهاتف الذي سيتم إرسال السلة إليه
+        const cartContent = cart.length ? cart.join(', ') : 'السلة فارغة.';
+        const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(cartContent)}`;
+        window.open(whatsappURL, '_blank');
     }
 
     // إضافة عرض الشرائح للصور
