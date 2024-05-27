@@ -85,7 +85,7 @@
         .products {
             display: flex;
             flex-wrap: wrap;
-            justify-content: space-around;
+            justify-content: space-between;
         }
         .product {
             background-color: #f9f9f9;
@@ -94,7 +94,10 @@
             padding: 20px;
             margin: 10px;
             text-align: center;
-            width: 200px;
+            width: calc(50% - 20px);
+            box-sizing: border-box;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
         }
         .product img {
             width: 100%;
@@ -106,21 +109,27 @@
             font-size: 1.2em;
             margin: 10px 0;
         }
+        .product:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
         .btn {
-            display: inline-block;
-            padding: 10px 20px;
-            font-size: 1em;
-            color: white;
-            background-color: #FF5733;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background-color 0.3s ease, transform 0.3s ease;
-            margin: 10px 0;
-        }
-        .btn:hover {
-            background-color: #FF7043;
-            transform: scale(1.1);
-        }
+    display: inline-block;
+    padding: 5px 10px;  /* تقليل حجم الحواف */
+    margin-top: 10px;
+    font-size: 11px;  /* تصغير حجم الخط */
+    color: #fff;
+    background-color: #FF5733;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background-color: #FF7043;
+}
+
         footer {
             text-align: center;
             padding: 20px 0;
@@ -188,6 +197,25 @@
         #cart-details {
             margin-top: 20px;
         }
+        #product-details {
+            display: none;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            margin: 20px 0;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        #product-details img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        #product-details h3 {
+            color: #FF5733;
+            font-size: 1.5em;
+            margin: 10px 0;
+        }
     </style>
 </head>
 <body>
@@ -221,202 +249,132 @@
 <div class="container">
     <section id="welcome" class="section active">
         <h2>مرحبًا بك في متجر Temu Yemen!</h2>
-        <p>نحن نقدم أفضل المنتجات وأجودها لكم. تفضلوا بزيارة متجرنا واستمتعوا بتجربة تسوق رائعة.</p>
-        <p>إعلان: عروض خاصة لفترة محدودة!</p>
+        <p>نحن نقدم أفضل المنتجات وأجودها لكم. تفضلوا بزيارة متجرنا واستمتعوا بتجربة تسوق مميزة.</p>
         <div class="slideshow">
-            <img src="images/slide1.png" alt="صورة 1" class="active">
-            <img src="images/slide2.png" alt="صورة 2">
-            <img src="images/slide3.jpg" alt="صورة 3">
-            <img src="images/slide4.jpeg" alt="صورة 4">
+            <img src="https://via.placeholder.com/1200x400/FF5733/FFFFFF?text=Welcome+to+Temu+Yemen" class="active" alt="Welcome to Temu Yemen">
+            <img src="https://via.placeholder.com/1200x400/FF7043/FFFFFF?text=Best+Products+in+Yemen" alt="Best Products in Yemen">
+            <img src="https://via.placeholder.com/1200x400/FF5733/FFFFFF?text=Shop+Now" alt="Shop Now">
         </div>
-        <!-- قسم المنتجات الرئيسية -->
+        <h2>منتجات مميزة</h2>
         <div class="featured-products">
             <div class="featured-product">
-                <img src="images/women1.jpeg" alt="منتج النساء">
-                <h3>منتج النساء</h3>
+                <img src="https://via.placeholder.com/200x200/FF5733/FFFFFF?text=Product+1" alt="Product 1">
+                <h3>منتج 1</h3>
+                <button class="btn" onclick="showProductDetails('منتج 1', 'https://via.placeholder.com/400x400/FF5733/FFFFFF?text=Product+1')">عرض التفاصيل</button>
+                <button class="btn" onclick="addToCart('منتج 1')">أضف إلى السلة</button>
             </div>
             <div class="featured-product">
-                <img src="images/kids1.jpg" alt="منتج الأطفال">
-                <h3>منتج الأطفال</h3>
+                <img src="https://via.placeholder.com/200x200/FF7043/FFFFFF?text=Product+2" alt="Product 2">
+                <h3>منتج 2</h3>
+                <button class="btn" onclick="showProductDetails('منتج 2', 'https://via.placeholder.com/400x400/FF7043/FFFFFF?text=Product+2')">عرض التفاصيل</button>
+                <button class="btn" onclick="addToCart('منتج 2')">أضف إلى السلة</button>
             </div>
-            <div class="featured-product">
-                <img src="images/boys1.jpg" alt="منتج الأولاد">
-                <h3>منتج الأولاد</h3>
-            </div>
-            <div class="featured-product">
-                <img src="images/men1.jpg" alt="منتج الرجال">
-                <h3>منتج الرجال</h3>
-            </div>
+            <!-- Add more products as needed -->
         </div>
     </section>
-
-    <!-- الأقسام الأخرى -->
     <section id="men" class="section">
-        <h2><i class="fas fa-male"></i> الرجال</h2>
-        <p>منتجات مخصصة للرجال.</p>
+        <h2>قسم الرجال</h2>
         <div class="products">
-            <div class="product">
-                <img src="images/men1.jpg" alt="منتج الرجال 1">
-                <h3>منتج الرجال 1</h3>
-                <a href="#" class="btn" onclick="addToCart('منتج الرجال 1')">شراء</a>
+            <div class="product" onclick="showProductDetails('بدلة 1', 'https://via.placeholder.com/400x400/FF5733/FFFFFF?text=بدلة+1')">
+                <img src="https://via.placeholder.com/200x200/FF5733/FFFFFF?text=بدلة+1" alt="بدلة 1">
+                <h3>بدلة 1</h3>
+                <button class="btn" onclick="addToCart('بدلة 1')">أضف إلى السلة</button>
             </div>
-            <div class="product">
-                <img src="images/men2.jpg" alt="منتج الرجال 2">
-                <h3>منتج الرجال 2</h3>
-                <a href="#" class="btn" onclick="addToCart('منتج الرجال 2')">شراء</a>
+            <div class="product" onclick="showProductDetails('بدلة 2', 'https://via.placeholder.com/400x400/FF5733/FFFFFF?text=بدلة+2')">
+                <img src="https://via.placeholder.com/200x200/FF5733/FFFFFF?text=بدلة+2" alt="بدلة 2">
+                <h3>بدلة 2</h3>
+                <button class="btn" onclick="addToCart('بدلة 2')">أضف إلى السلة</button>
             </div>
-            <div class="product">
-                <img src="images/men3.jpg" alt="منتج الرجال 3">
-                <h3>منتج الرجال 3</h3>
-                <a href="#" class="btn" onclick="addToCart('منتج الرجال 3')">شراء</a>
+            <div class="product" onclick="showProductDetails('بدلة 3', 'https://via.placeholder.com/400x400/FF5733/FFFFFF?text=بدلة+3')">
+                <img src="https://via.placeholder.com/200x200/FF5733/FFFFFF?text=بدلة+3" alt="بدلة 3">
+                <h3>بدلة 3</h3>
+                <button class="btn" onclick="addToCart('بدلة 3')">أضف إلى السلة</button>
             </div>
-            <div class="product">
-                <img src="images/men4.jpg" alt="منتج الرجال 4">
-                <h3>منتج الرجال 4</h3>
-                <a href="#" class="btn" onclick="addToCart('منتج الرجال 4')">شراء</a>
+            <div class="product" onclick="showProductDetails('بدلة 4', 'https://via.placeholder.com/400x400/FF5733/FFFFFF?text=بدلة+4')">
+                <img src="https://via.placeholder.com/200x200/FF5733/FFFFFF?text=بدلة+4" alt="بدلة 4">
+                <h3>بدلة 4</h3>
+                <button class="btn" onclick="addToCart('بدلة 4')">أضف إلى السلة</button>
             </div>
         </div>
     </section>
-
     <section id="women" class="section">
-        <h2><i class="fas fa-female"></i> النساء</h2>
-        <p>منتجات مخصصة للنساء.</p>
+        <h2>قسم النساء</h2>
         <div class="products">
-            <div class="product">
-                <img src="images/women1.jpeg" alt="منتج النساء 1">
-                <h3>منتج النساء 1</h3>
-                <a href="#" class="btn" onclick="addToCart('منتج النساء 1')">شراء</a>
+            <div class="product" onclick="showProductDetails('فستان 1', 'images/women1.jpg')">
+                <img src="images/women1.jpg" alt="فستان 1">
+                <h3>فستان 1</h3>
+                <button class="btn" onclick="addToCart('فستان 1')">أضف إلى السلة</button>
             </div>
-            <div class="product">
-                <img src="images/women2.jpeg" alt="منتج النساء 2">
-                <h3>منتج النساء 2</h3>
-                <a href="#" class="btn" onclick="addToCart('منتج النساء 2')">شراء</a>
+            <div class="product" onclick="showProductDetails('فستان 2', 'https://via.placeholder.com/400x400/FF7043/FFFFFF?text=فستان+2')">
+                <img src="images/women2.jpg" alt="فستان 2">
+                <h3>فستان 2</h3>
+                <button class="btn" onclick="addToCart('فستان 2')">أضف إلى السلة</button>
             </div>
-            <div class="product">
-                <img src="images/women3.jpeg" alt="منتج النساء 3">
-                <h3>منتج النساء 3</h3>
-                <a href="#" class="btn" onclick="addToCart('منتج النساء 3')">شراء</a>
+            <div class="product" onclick="showProductDetails('فستان 3', 'https://via.placeholder.com/400x400/FF7043/FFFFFF?text=فستان+3')">
+                <img src="images/women3.jpg" alt="فستان 3">
+                <h3>فستان 3</h3>
+                <button class="btn" onclick="addToCart('فستان 3')">أضف إلى السلة</button>
             </div>
-            <div class="product">
-                <img src="images/women4.jpeg" alt="منتج النساء 4">
-                <h3>منتج النساء 4</h3>
-                <a href="#" class="btn" onclick="addToCart('منتج النساء 4')">شراء</a>
+            <div class="product" onclick="showProductDetails('فستان 4', 'https://via.placeholder.com/400x400/FF7043/FFFFFF?text=فستان+4')">
+                <img src="images/women4.jpg" alt="فستان 4">
+                <h3>فستان 4</h3>
+                <button class="btn" onclick="addToCart('فستان 4')">أضف إلى السلة</button>
             </div>
         </div>
     </section>
-
-    <section id="kids" class="section">
-        <h2><i class="fas fa-child"></i> الأطفال</h2>
-        <p>منتجات مخصصة للأطفال.</p>
-        <div class="products">
-            <div class="product">
-                <img src="images/kids1.jpg" alt="منتج الأطفال 1">
-                <h3>منتج الأطفال 1</h3>
-                <a href="#" class="btn" onclick="addToCart('منتج الأطفال 1')">شراء</a>
-            </div>
-            <div class="product">
-                <img src="images/kids2.jpg" alt="منتج الأطفال 2">
-                <h3>منتج الأطفال 2</h3>
-                <a href="#" class="btn" onclick="addToCart('منتج الأطفال 2')">شراء</a>
-            </div>
-            <div class="product">
-                <img src="images/kids3.jpg" alt="منتج الأطفال 3">
-                <h3>منتج الأطفال 3</h3>
-                <a href="#" class="btn" onclick="addToCart('منتج الأطفال 3')">شراء</a>
-            </div>
-            <div class="product">
-                <img src="images/kids4.jpg" alt="منتج الأطفال 4">
-                <h3>منتج الأطفال 4</h3>
-                <a href="#" class="btn" onclick="addToCart('منتج الأطفال 4')">شراء</a>
-            </div>
-        </div>
-    </section>
-
-    <section id="home" class="section">
-        <h2><i class="fas fa-home"></i> المنزل</h2>
-        <p>منتجات مخصصة للمنزل.</p>
-        <div class="products">
-            <div class="product">
-                <img src="images/home1.jpg" alt="منتج المنزل 1">
-                <h3>منتج المنزل 1</h3>
-                <a href="#" class="btn" onclick="addToCart('منتج المنزل 1')">شراء</a>
-            </div>
-            <div class="product">
-                <img src="images/home2.jpg" alt="منتج المنزل 2">
-                <h3>منتج المنزل 2</h3>
-                <a href="#" class="btn" onclick="addToCart('منتج المنزل 2')">شراء</a>
-            </div>
-            <div class="product">
-                <img src="images/home3.jpg" alt="منتج المنزل 3">
-                <h3>منتج المنزل 3</h3>
-                <a href="#" class="btn" onclick="addToCart('منتج المنزل 3')">شراء</a>
-            </div>
-            <div class="product">
-                <img src="images/home4.jpg" alt="منتج المنزل 4">
-                <h3>منتج المنزل 4</h3>
-                <a href="#" class="btn" onclick="addToCart('منتج المنزل 4')">شراء</a>
-            </div>
-        </div>
-    </section>
-    
-    <section id="cart" class="section">
-        <h2><i class="fas fa-shopping-cart"></i> سلة المشتريات</h2>
-        <div id="cart-details"></div>
-        <button class="btn" onclick="sendCart()">إرسال السلة عبر واتس آب</button>
-    </section>
+    <!-- Add more sections as needed -->
+    <div id="product-details">
+        <img id="product-image" src="" alt="Product Image">
+        <h3 id="product-title"></h3>
+    </div>
+    <div id="cart-details">
+        <h2>سلة المشتريات</h2>
+        <ul id="cart-list"></ul>
+    </div>
 </div>
 
 <footer>
-    <p>&copy; 2024 Temu Yemen. جميع الحقوق محفوظة.</p>
+    <p>جميع الحقوق محفوظة &copy; 2024 متجر Temu Yemen</p>
 </footer>
 
 <div class="bottom-nav">
-    <a onclick="showSection('welcome')"><i class="fas fa-home"></i> الصفحة الرئيسية</a>
-    <a onclick="showSection('favorites')"><i class="fas fa-heart"></i> المفضلات</a>
-    <a onclick="showSection('cart')"><i class="fas fa-shopping-cart"></i> سلة المشتريات</a>
-    <a onclick="showSection('account')"><i class="fas fa-user"></i> الحساب</a>
+    <a href="#" onclick="showSection('welcome')"><i class="fas fa-home"></i> الرئيسية</a>
+    <a href="#" onclick="showSection('men')"><i class="fas fa-male"></i> الرجال</a>
+    <a href="#" onclick="showSection('women')"><i class="fas fa-female"></i> النساء</a>
+    <a href="#" onclick="showSection('cart-details')"><i class="fas fa-shopping-cart"></i> السلة</a>
 </div>
 
 <script>
-    let cart = [];
+    let slideIndex = 0;
+    function showSlides() {
+        let slides = document.querySelectorAll('.slideshow img');
+        slides.forEach((slide, index) => {
+            slide.style.display = (index === slideIndex) ? 'block' : 'none';
+        });
+        slideIndex = (slideIndex + 1) % slides.length;
+        setTimeout(showSlides, 3000);
+    }
+    showSlides();
 
     function showSection(sectionId) {
-        var sections = document.querySelectorAll('.section');
-        sections.forEach(function(section) {
+        document.querySelectorAll('.section').forEach(section => {
             section.classList.remove('active');
         });
         document.getElementById(sectionId).classList.add('active');
-        if (sectionId === 'cart') {
-            updateCartDetails();
-        }
     }
 
-    function addToCart(productName) {
-        cart.push(productName);
-        alert(productName + ' تمت إضافته إلى السلة.');
+    function showProductDetails(title, imageUrl) {
+        document.getElementById('product-title').textContent = title;
+        document.getElementById('product-image').src = imageUrl;
+        document.getElementById('product-details').style.display = 'block';
     }
 
-    function updateCartDetails() {
-        const cartDetails = document.getElementById('cart-details');
-        cartDetails.innerHTML = cart.length ? cart.map(item => `<p>${item}</p>`).join('') : '<p>السلة فارغة.</p>';
+    function addToCart(product) {
+        let cartList = document.getElementById('cart-list');
+        let listItem = document.createElement('li');
+        listItem.textContent = product;
+        cartList.appendChild(listItem);
     }
-
-    function sendCart() {
-        const phoneNumber = '+967780595958'; // رقم الهاتف الذي سيتم إرسال السلة إليه
-        const cartContent = cart.length ? cart.join(', ') : 'السلة فارغة.';
-        const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(cartContent)}`;
-        window.open(whatsappURL, '_blank');
-    }
-
-    // إضافة عرض الشرائح للصور
-    let currentSlide = 0;
-    const slides = document.querySelectorAll('.slideshow img');
-    setInterval(() => {
-        slides[currentSlide].classList.remove('active');
-        currentSlide = (currentSlide + 1) % slides.length;
-        slides[currentSlide].classList.add('active');
-    }, 3000);
 </script>
-
 </body>
 </html>
