@@ -16,18 +16,18 @@
             overflow-x: hidden;
         }
         header {
-            background-color: #222;
+            background-color: #111;
             color: #fff;
-            padding: 15px 20px;
+            padding: 10px 20px;
             box-shadow: 0 4px 6px rgba(0,0,0,0.3);
             z-index: 1000;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
             position: fixed;
             width: 100%;
             top: 0;
             left: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
         header h1 {
             font-size: 1.8em;
@@ -38,6 +38,22 @@
         header .icon {
             margin-left: 10px;
             color: #FFD700;
+        }
+        nav {
+            display: flex;
+            gap: 15px;
+        }
+        nav a {
+            color: #FFD700;
+            text-decoration: none;
+            font-size: 1.1em;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        nav a:hover {
+            background-color: #FFD700;
+            color: #111;
         }
         .container {
             padding: 120px 20px 20px;
@@ -97,13 +113,19 @@
         @media (max-width: 768px) {
             header {
                 flex-direction: column;
-                padding: 20px;
+                align-items: flex-start;
             }
             header h1 {
-                font-size: 1.5em;
+                margin-bottom: 10px;
             }
-            .container {
-                padding: 120px 10px 20px;
+            nav {
+                flex-direction: column;
+                width: 100%;
+            }
+            nav a {
+                text-align: center;
+                padding: 10px;
+                width: 100%;
             }
         }
     </style>
@@ -172,20 +194,18 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <script>
-        // Initialize EmailJS
-        (function() {
-            emailjs.init("YOUR_USER_ID"); // استبدل YOUR_USER_ID بمعرف المستخدم الخاص بك من EmailJS
+        (function(){
+            emailjs.init('YOUR_USER_ID'); // Replace 'YOUR_USER_ID' with your actual EmailJS user ID
         })();
 
-        // Contact form submission
         document.getElementById('contactForm').addEventListener('submit', function(event) {
             event.preventDefault();
 
-            emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', this)
+            emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', this) // Replace with your actual service and template IDs
                 .then(function() {
-                    alert('تم إرسال رسالتك بنجاح!');
+                    alert('رسالتك أُرسلت بنجاح!');
                 }, function(error) {
-                    alert('فشل في إرسال الرسالة: ' + JSON.stringify(error));
+                    alert('حدث خطأ ما... الرجاء المحاولة مرة أخرى');
                 });
         });
     </script>
