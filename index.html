@@ -25,33 +25,30 @@
             width: 100%;
             top: 0;
             left: 0;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
         }
-        header h1 {
-            font-size: 1.8em;
-            margin: 0;
+        .navbar-brand {
+            font-size: 1.5em;
             display: flex;
             align-items: center;
         }
-        header .icon {
+        .navbar-brand .icon {
             margin-left: 10px;
             color: #FFD700;
         }
-        nav {
-            display: flex;
-            gap: 15px;
+        .navbar-brand .small-text {
+            font-size: 0.7em; /* تصغير حجم الخط */
+            margin-left: 5px;
+            color: #FFD700;
         }
-        nav a {
+        .navbar-nav .nav-link {
             color: #FFD700;
             text-decoration: none;
-            font-size: 1.1em;
+            font-size: 1em;
             padding: 5px 10px;
             border-radius: 5px;
             transition: background-color 0.3s, color 0.3s;
         }
-        nav a:hover {
+        .navbar-nav .nav-link:hover {
             background-color: #FFD700;
             color: #111;
         }
@@ -110,34 +107,36 @@
         footer .social-icons a:hover {
             color: #FFC107;
         }
-        @media (max-width: 768px) {
-            header {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-            header h1 {
-                margin-bottom: 10px;
-            }
-            nav {
-                flex-direction: column;
-                width: 100%;
-            }
-            nav a {
-                text-align: center;
-                padding: 10px;
-                width: 100%;
-            }
-        }
     </style>
 </head>
 <body>
     <header>
-        <h1 class="animate__animated animate__fadeInDown">إدارة الإنترنت - منية البناء <i class="fas fa-network-wired icon"></i></h1>
-        <nav>
-            <a href="#welcome" class="nav-link">الرئيسية</a>
-            <a href="#creativity" class="nav-link">إبداع</a>
-            <a href="#services" class="nav-link">خدماتنا</a>
-            <a href="#contact" class="nav-link">تواصل معنا</a>
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <i class="fas fa-network-wired icon"></i> إدارة الإنترنت
+                    <span class="small-text">منية البناء</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#welcome">الرئيسية</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#creativity">إبداع</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#services">خدماتنا</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">تواصل معنا</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </nav>
     </header>
 
