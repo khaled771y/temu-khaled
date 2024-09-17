@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إدارة الإنترنت - منية البناء</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+            background: linear-gradient(135deg, #1e2024, #3d3d3d);
+            overflow-x: hidden;
+        }
+        header {
+            background-color: #222;
+            color: #fff;
+            padding: 15px 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+        }
+        header h1 {
+            font-size: 1.8em;
+            margin: 0;
+            display: flex;
+            align-items: center;
+        }
+        header .icon {
+            margin-left: 10px;
+            color: #FFD700;
+        }
+        .container {
+            padding: 120px 20px 20px;
+        }
+        h2 {
+            font-size: 2em;
+            margin-top: 1em;
+            color: #FFD700;
+            border-bottom: 2px solid #FFD700;
+            padding-bottom: 0.5em;
+        }
+        p {
+            line-height: 1.6;
+            color: #eee;
+        }
+        .section {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            margin-bottom: 20px;
+            backdrop-filter: blur(10px);
+        }
+        .section button {
+            background: linear-gradient(45deg, #FFD700, #FFC107);
+            border: none;
+            color: #000;
+            padding: 10px 20px;
+            font-size: 1em;
+            margin: 10px 0;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.3s;
+        }
+        .section button:hover {
+            background: linear-gradient(45deg, #FFC107, #FFD700);
+            transform: scale(1.05);
+        }
+        footer {
+            background-color: #222;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+        footer .social-icons {
+            margin: 10px 0;
+        }
+        footer .social-icons a {
+            color: #FFD700;
+            margin: 0 10px;
+            font-size: 1.5em;
+            transition: color 0.3s;
+        }
+        footer .social-icons a:hover {
+            color: #FFC107;
+        }
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                padding: 20px;
+            }
+            header h1 {
+                font-size: 1.5em;
+            }
+            .container {
+                padding: 120px 10px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="animate__animated animate__fadeInDown">إدارة الإنترنت - منية البناء <i class="fas fa-network-wired icon"></i></h1>
+        <nav>
+            <a href="#welcome" class="nav-link">الرئيسية</a>
+            <a href="#creativity" class="nav-link">إبداع</a>
+            <a href="#services" class="nav-link">خدماتنا</a>
+            <a href="#contact" class="nav-link">تواصل معنا</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <section id="welcome" class="section animate__animated animate__fadeInUp">
+            <h2><i class="fas fa-handshake icon"></i> مرحبا بك</h2>
+            <p>تحتل مركزاً هاماً في مجال إدارة الإنترنت والخدمات الرقمية. نحن هنا لنساعدك في تحقيق أهدافك وتقديم الدعم اللازم لتحقيق طموحاتك. قم بتجميع أفكارك ثم انتقل إلى الخطوة التالية لتحقيق الأهداف.</p>
+            <button>ابدأ الآن</button>
+        </section>
+
+        <section id="creativity" class="section animate__animated animate__fadeInUp">
+            <h2><i class="fas fa-lightbulb icon"></i> انتعاش وإبداع</h2>
+            <p>ناقش أفكارك وابداعك معنا. نحن هنا لنساعدك في تطوير أفكارك وتحويلها إلى واقع ملموس. تنافس معنا وحقق أهدافك بفضل دعمنا الاحترافي.</p>
+            <button>استشرنا الآن</button>
+        </section>
+
+        <section id="services" class="section animate__animated animate__fadeInUp">
+            <h2><i class="fas fa-cogs icon"></i> خدماتنا</h2>
+            <p>نحن نقدم مجموعة واسعة من الخدمات بما في ذلك التحليل، التصميم، البرمجة، والتطوير. فريقنا من الخبراء جاهز للعمل على أفكارك وتحقيقها بأعلى مستويات الجودة.</p>
+            <button>تعرف على المزيد</button>
+        </section>
+
+        <section id="contact" class="section animate__animated animate__fadeInUp">
+            <h2><i class="fas fa-envelope icon"></i> تواصل معنا</h2>
+            <form id="contactForm">
+                <div class="mb-3">
+                    <label for="name" class="form-label">الاسم</label>
+                    <input type="text" class="form-control" id="name" required>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">البريد الإلكتروني</label>
+                    <input type="email" class="form-control" id="email" required>
+                </div>
+                <div class="mb-3">
+                    <label for="message" class="form-label">رسالتك</label>
+                    <textarea class="form-control" id="message" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">إرسال</button>
+            </form>
+        </section>
+    </div>
+
+    <footer>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+        </div>
+        <p>حقوق الطبع والنشر &copy; 2024 منية البناء. جميع الحقوق محفوظة.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+        // Initialize EmailJS
+        (function() {
+            emailjs.init("YOUR_USER_ID"); // استبدل YOUR_USER_ID بمعرف المستخدم الخاص بك من EmailJS
+        })();
+
+        // Contact form submission
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', this)
+                .then(function() {
+                    alert('تم إرسال رسالتك بنجاح!');
+                }, function(error) {
+                    alert('فشل في إرسال الرسالة: ' + JSON.stringify(error));
+                });
+        });
+    </script>
+</body>
+</html>
