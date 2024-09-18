@@ -6,142 +6,8 @@
     <title>إدارة الإنترنت - الصفحة الرئيسية</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            color: #333;
-            background: linear-gradient(135deg, #1e2024, #3d3d3d);
-            overflow-x: hidden;
-        }
-        header {
-            background-color: #111;
-            color: #fff;
-            padding: 10px 20px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
-            z-index: 1000;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            left: 0;
-        }
-        .navbar-brand {
-            font-size: 1.5em;
-            display: flex;
-            align-items: center;
-        }
-        .navbar-brand .icon {
-            margin-left: 10px;
-            color: #FFD700;
-        }
-        .navbar-brand .small-text {
-            font-size: 0.7em;
-            margin-left: 5px;
-            color: #FFD700;
-        }
-        .navbar-nav .nav-link {
-            color: #FFD700;
-            text-decoration: none;
-            font-size: 1em;
-            padding: 5px 10px;
-            border-radius: 5px;
-            transition: background-color 0.3s, color 0.3s;
-        }
-        .navbar-nav .nav-link:hover {
-            background-color: #FFD700;
-            color: #111;
-        }
-        .container {
-            padding: 120px 20px 20px;
-        }
-        h2 {
-            font-size: 2em;
-            margin-top: 1em;
-            color: #FFD700;
-            border-bottom: 2px solid #FFD700;
-            padding-bottom: 0.5em;
-        }
-        p {
-            line-height: 1.6;
-            color: #eee;
-        }
-        .section {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-            margin-bottom: 20px;
-            backdrop-filter: blur(10px);
-        }
-        .section button {
-            background: linear-gradient(45deg, #FFD700, #FFC107);
-            border: none;
-            color: #000;
-            padding: 10px 20px;
-            font-size: 1em;
-            margin: 10px 0;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background 0.3s, transform 0.3s;
-        }
-        .section button:hover {
-            background: linear-gradient(45deg, #FFC107, #FFD700);
-            transform: scale(1.05);
-        }
-        footer {
-            background-color: #222;
-            color: #fff;
-            text-align: center;
-            padding: 20px 0;
-        }
-        footer .social-icons {
-            margin: 10px 0;
-        }
-        footer .social-icons a {
-            color: #FFD700;
-            margin: 0 10px;
-            font-size: 1.5em;
-            transition: color 0.3s;
-        }
-        footer .social-icons a:hover {
-            color: #FFC107;
-        }
-        .news-ticker {
-            background-color: #333;
-            color: #fff;
-            overflow: hidden;
-            white-space: nowrap;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-        }
-        .news-ticker p {
-            display: inline-block;
-            padding: 10px 0;
-            animation: scroll 15s linear infinite;
-        }
-        @keyframes scroll {
-            from {
-                transform: translateX(100%);
-            }
-            to {
-                transform: translateX(-100%);
-            }
-        }
-        .statistics-container {
-            display: flex;
-            justify-content: center;
-            gap: 40px;
-            margin-top: 20px;
-        }
-        .statistic {
-            text-align: center;
-            color: #FFD700;
-        }
-        .statistic-number {
-            font-size: 2em;
-            font-weight: bold;
-        }
-    </style>
 </head>
 <body>
     <header>
@@ -156,49 +22,40 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="index.html">الرئيسية</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="services.html">الخدمات</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="content-management.html">إدارة المحتوى</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="presentation.html">العرض والتقديم</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="about.html">عنا</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="contact.html">اتصل بنا</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="sitemap.html">خريطة الموقع</a>
-                        </li>
+                        <li class="nav-item"><a class="nav-link" href="index.html">الرئيسية</a></li>
+                        <li class="nav-item"><a class="nav-link" href="services.html">الخدمات</a></li>
+                        <li class="nav-item"><a class="nav-link" href="content-management.html">إدارة المحتوى</a></li>
+                        <li class="nav-item"><a class="nav-link" href="presentation.html">العرض والتقديم</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">عنا</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">اتصل بنا</a></li>
+                        <li class="nav-item"><a class="nav-link" href="sitemap.html">خريطة الموقع</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
 
-    <!-- شريط الأخبار -->
     <div class="news-ticker">
         <p>تكليف من الطالبة منية عبدالحكيم البناء بإشراف الدكتور محمد سليمان.</p>
     </div>
 
-    <div class="container">
-        <section class="section animate__animated animate__fadeInUp">
-            <h2><i class="fas fa-handshake icon"></i> مرحبا بك</h2>
-            <p>تحتل مركزاً هاماً في مجال إدارة الإنترنت والخدمات الرقمية. نحن هنا لنساعدك في تحقيق أهدافك وتقديم الدعم اللازم لتحقيق طموحاتك. قم بتجميع أفكارك ثم انتقل إلى الخطوة التالية لتحقيق الأهداف.</p>
-            <button>ابدأ الآن</button>
+    <div class="container main-content">
+        <section class="section intro-section">
+            <div class="row">
+                <div class="col-md-6 intro-text">
+                    <h2>مرحباً بك في إدارة الإنترنت</h2>
+                    <p>نحن هنا لنقدم لك أفضل الخدمات في مجال إدارة الإنترنت والخدمات الرقمية. قم بتجميع أفكارك ثم انتقل إلى الخطوة التالية لتحقيق النجاح في العالم الرقمي.</p>
+                    <button class="btn-custom">ابدأ الآن</button>
+                </div>
+                <div class="col-md-6 intro-image">
+                    <img src="network-image.jpg" alt="إدارة الإنترنت" class="img-fluid rounded">
+                </div>
+            </div>
         </section>
 
-        <!-- إحصائيات الزوار -->
-        <section class="section animate__animated animate__fadeInUp">
+        <section class="section stats-section">
             <h2><i class="fas fa-chart-line icon"></i> إحصائيات الموقع</h2>
-            <div class="statistics-container">
+            <div class="statistics-grid">
                 <div class="statistic">
                     <div class="statistic-number">124,972</div>
                     <div>عدد الزوار</div>
@@ -214,15 +71,17 @@
             </div>
         </section>
     </div>
-    
+
     <footer>
-        <div class="social-icons">
-            <a href="#"><i class="fab fa-facebook"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-linkedin"></i></a>
+        <div class="container">
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+            <p>حقوق الطبع © 2024 إدارة الإنترنت - منية البناء. جميع الحقوق محفوظة.</p>
         </div>
-        <p>حقوق الطبع © 2024 إدارة الإنترنت - منية البناء. جميع الحقوق محفوظة.</p>
     </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
