@@ -3,20 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>إدارة الإنترنت - الصفحة الرئيسية</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>إدارة الإنترنت - منية البناء</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- شريط التنقل -->
     <header>
-        <nav class="navbar navbar-expand-lg navbar-dark">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">
-                    <i class="fas fa-network-wired icon"></i> إدارة الإنترنت
-                    <span class="small-text">منية البناء</span>
-                </a>
+                <a class="navbar-brand" href="index.html">إدارة الإنترنت</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -35,53 +32,41 @@
         </nav>
     </header>
 
-    <div class="news-ticker">
+    <!-- شريط الأخبار -->
+    <div class="news-ticker bg-primary text-white text-center">
         <p>تكليف من الطالبة منية عبدالحكيم البناء بإشراف الدكتور محمد سليمان.</p>
     </div>
 
-    <div class="container main-content">
-        <section class="section intro-section">
-            <div class="row">
-                <div class="col-md-6 intro-text">
-                    <h2>مرحباً بك في إدارة الإنترنت</h2>
-                    <p>نحن هنا لنقدم لك أفضل الخدمات في مجال إدارة الإنترنت والخدمات الرقمية. قم بتجميع أفكارك ثم انتقل إلى الخطوة التالية لتحقيق النجاح في العالم الرقمي.</p>
-                    <button class="btn-custom">ابدأ الآن</button>
-                </div>
-                <div class="col-md-6 intro-image">
-                    <img src="network-image.jpg" alt="إدارة الإنترنت" class="img-fluid rounded">
-                </div>
+    <div class="container mt-5 pt-5">
+        <h2 class="text-center my-5">مرحباً بك في إدارة الإنترنت</h2>
+        <p class="lead text-center">نحن هنا لنساعدك في تحقيق أهدافك وتقديم الدعم اللازم لتحقيق طموحاتك.</p>
+        
+        <!-- إحصائيات الموقع -->
+        <div class="row text-center my-5">
+            <div class="col-md-4">
+                <h3 class="statistic-number">124,972</h3>
+                <p>عدد الزوار</p>
             </div>
-        </section>
-
-        <section class="section stats-section">
-            <h2><i class="fas fa-chart-line icon"></i> إحصائيات الموقع</h2>
-            <div class="statistics-grid">
-                <div class="statistic">
-                    <div class="statistic-number">124,972</div>
-                    <div>عدد الزوار</div>
-                </div>
-                <div class="statistic">
-                    <div class="statistic-number">23,444</div>
-                    <div>عدد المشتركين</div>
-                </div>
-                <div class="statistic">
-                    <div class="statistic-number">848,292</div>
-                    <div>عدد الزيارات</div>
-                </div>
+            <div class="col-md-4">
+                <h3 class="statistic-number">23,444</h3>
+                <p>عدد المشتركين</p>
             </div>
-        </section>
+            <div class="col-md-4">
+                <h3 class="statistic-number">848,292</h3>
+                <p>عدد الزيارات</p>
+            </div>
+        </div>
     </div>
 
-    <footer>
-        <div class="container">
-            <div class="social-icons">
-                <a href="#"><i class="fab fa-facebook"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-linkedin"></i></a>
-            </div>
-            <p>حقوق الطبع © 2024 إدارة الإنترنت - منية البناء. جميع الحقوق محفوظة.</p>
+    <!-- التذييل -->
+    <footer class="bg-dark text-white text-center py-4">
+        <div class="social-icons mb-3">
+            <a href="#" class="text-white mx-2"><i class="fab fa-facebook fa-2x"></i></a>
+            <a href="#" class="text-white mx-2"><i class="fab fa-twitter fa-2x"></i></a>
+            <a href="#" class="text-white mx-2"><i class="fab fa-instagram fa-2x"></i></a>
+            <a href="#" class="text-white mx-2"><i class="fab fa-linkedin fa-2x"></i></a>
         </div>
+        <p>&copy; 2024 إدارة الإنترنت - منية البناء. جميع الحقوق محفوظة.</p>
     </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
