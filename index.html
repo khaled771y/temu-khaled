@@ -118,7 +118,7 @@
             font-size: 1.1em;
             font-weight: bold;
             position: fixed;
-            top: 60px; /* تأكد من أنه تحت الـ header */
+            top: 80px; /* جعل النص ينزل قليلاً إلى الأسفل */
             width: 100%;
             z-index: 999;
         }
@@ -126,16 +126,16 @@
         .news-ticker p {
             display: inline-block;
             padding: 10px 0;
-            animation: scroll 20s linear infinite;
+            animation: scroll 30s linear infinite; /* زيادة الوقت لجعل الحركة أبطأ */
             margin: 0;
         }
 
         @keyframes scroll {
             from {
-                transform: translateX(100%);
+                transform: translateX(-100%); /* يبدأ من اليسار */
             }
             to {
-                transform: translateX(-100%);
+                transform: translateX(100%); /* ينتهي في اليمين */
             }
         }
 
