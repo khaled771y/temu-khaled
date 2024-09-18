@@ -3,21 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>الخدمات</title>
+    <title>الخدمات - إدارة الإنترنت</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- شريط التنقل -->
     <header>
-        <nav class="navbar navbar-expand-lg navbar-dark">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
             <div class="container-fluid">
-                <a class="navbar-brand" href="index.html">
-                    <i class="fas fa-network-wired icon"></i> إدارة الإنترنت
-                </a>
+                <a class="navbar-brand" href="index.html">إدارة الإنترنت</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item"><a class="nav-link" href="index.html">الرئيسية</a></li>
-                        <li class="nav-item"><a class="nav-link" href="services.html">الخدمات</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="services.html">الخدمات</a></li>
                         <li class="nav-item"><a class="nav-link" href="content-management.html">إدارة المحتوى</a></li>
                         <li class="nav-item"><a class="nav-link" href="presentation.html">العرض والتقديم</a></li>
                         <li class="nav-item"><a class="nav-link" href="about.html">عنا</a></li>
@@ -29,28 +32,28 @@
         </nav>
     </header>
 
-    <div class="container main-content">
-        <section class="section services-section">
-            <h2><i class="fas fa-briefcase icon"></i> خدماتنا</h2>
-            <p>نقدم مجموعة متنوعة من الخدمات الرقمية المتميزة التي تهدف إلى تعزيز وجودك الرقمي وتطوير أعمالك. معاً يمكننا تحقيق النجاح.</p>
-            <div class="services-list">
-                <div class="service-item">خدمة 1</div>
-                <div class="service-item">خدمة 2</div>
-                <div class="service-item">خدمة 3</div>
-            </div>
-        </section>
+    <div class="container mt-5 pt-5">
+        <h2 class="text-center my-5">خدماتنا</h2>
+        <p class="lead text-center">نقدم مجموعة واسعة من الخدمات بما في ذلك التحليل، التصميم، البرمجة، والتطوير.</p>
+        
+        <!-- قائمة الخدمات -->
+        <ul class="list-group my-5">
+            <li class="list-group-item">تحليل البيانات</li>
+            <li class="list-group-item">تصميم مواقع الإنترنت</li>
+            <li class="list-group-item">تطوير التطبيقات</li>
+            <li class="list-group-item">استضافة مواقع</li>
+        </ul>
     </div>
 
-    <footer>
-        <div class="container">
-            <div class="social-icons">
-                <a href="#"><i class="fab fa-facebook"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-linkedin"></i></a>
-            </div>
-            <p>حقوق الطبع © 2024 إدارة الإنترنت. جميع الحقوق محفوظة.</p>
+    <!-- التذييل -->
+    <footer class="bg-dark text-white text-center py-4">
+        <div class="social-icons mb-3">
+            <a href="#" class="text-white mx-2"><i class="fab fa-facebook fa-2x"></i></a>
+            <a href="#" class="text-white mx-2"><i class="fab fa-twitter fa-2x"></i></a>
+            <a href="#" class="text-white mx-2"><i class="fab fa-instagram fa-2x"></i></a>
+            <a href="#" class="text-white mx-2"><i class="fab fa-linkedin fa-2x"></i></a>
         </div>
+        <p>&copy; 2024 إدارة الإنترنت - منية البناء. جميع الحقوق محفوظة.</p>
     </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
