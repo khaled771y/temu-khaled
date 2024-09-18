@@ -53,7 +53,7 @@
             color: #111;
         }
         .container {
-            padding: 120px 20px 20px;
+            padding: 160px 20px 20px; /* تعديل padding لاحتواء الشريط الإعلاني */
         }
         h2 {
             font-size: 2em;
@@ -107,18 +107,29 @@
         footer .social-icons a:hover {
             color: #FFC107;
         }
+
+        /* الشريط الإعلاني */
         .news-ticker {
-            background-color: #333;
-            color: #fff;
+            background-color: rgba(255, 215, 0, 0.8); /* خلفية شبه شفافة ذهبية */
+            color: #111;
             overflow: hidden;
             white-space: nowrap;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            font-size: 1.1em;
+            font-weight: bold;
+            position: fixed;
+            top: 60px; /* تأكد من أنه تحت الـ header */
+            width: 100%;
+            z-index: 999;
         }
+
         .news-ticker p {
             display: inline-block;
             padding: 10px 0;
-            animation: scroll 15s linear infinite;
+            animation: scroll 20s linear infinite;
+            margin: 0;
         }
+
         @keyframes scroll {
             from {
                 transform: translateX(100%);
@@ -127,6 +138,7 @@
                 transform: translateX(-100%);
             }
         }
+
         .statistics-container {
             display: flex;
             justify-content: center;
@@ -180,12 +192,12 @@
                     </ul>
                 </div>
             </div>
-        </nav>
+         </nav>
     </header>
 
-    <!-- شريط الأخبار -->
+    <!-- شريط إعلاني متحرك -->
     <div class="news-ticker">
-        <p>تكليف من الطالبة منية عبدالحكيم البناء بإشراف الدكتور محمد سليمان.</p>
+        <p>هذا المشروع تم إنجازه بواسطة الطالبة منية عبدالحكيم البناء بإشراف الدكتور محمد سليمان. شكر خاص لوالدي العزيزين على دعمهما المستمر، وكل الحب والتقدير للعائلة والأصدقاء. هذا الإنجاز هو خطوة على طريق الطموح والإبداع. شكراً لكم جميعاً!</p>
     </div>
 
     <div class="container" id="home">
@@ -203,62 +215,41 @@
 
         <section id="content-management" class="section animate__animated animate__fadeInUp">
             <h2><i class="fas fa-folder-open icon"></i> إدارة المحتوى</h2>
-            <p>نقدم حلولًا شاملة لإدارة المحتوى الرقمي بشكل احترافي، بما في ذلك تنظيم المعلومات وتوزيعها وتحسين إمكانية الوصول إليها.</p>
-            <button>اطلع على التفاصيل</button>
+            <p>نحن نوفر لك أفضل الأدوات لإدارة محتواك بسهولة وفعالية، مع ضمان أعلى مستويات الأمان والموثوقية.</p>
+            <button>المزيد عن إدارة المحتوى</button>
         </section>
 
         <section id="presentation" class="section animate__animated animate__fadeInUp">
             <h2><i class="fas fa-presentation icon"></i> العرض والتقديم</h2>
-            <p>نوفر أدوات وأساليب حديثة لعرض المحتوى وتقديمه بطريقة فعالة وجذابة تساعد على توصيل الرسالة بشكل أفضل.</p>
-            <button>اطلع على المزيد</button>
+            <p>نقدم لك أفضل طرق العرض والتقديم للمحتوى الخاص بك، بطريقة جذابة وفعّالة، بما يساعد على إيصال الرسالة المطلوبة بشكل مثالي.</p>
+            <button>اكتشف المزيد</button>
         </section>
 
         <section id="about" class="section animate__animated animate__fadeInUp">
             <h2><i class="fas fa-info-circle icon"></i> عنا</h2>
-            <p>نحن فريق متخصص في إدارة الإنترنت والخدمات الرقمية، نسعى لتحقيق رؤيتنا في بناء مجتمع رقمي متكامل وفعال. نسعى دائمًا للابتكار وتقديم حلول ذكية للعملاء.</p>
-            <button>تعرف علينا</button>
+            <p>منية البناء، طالبة طموحة في مجال إدارة الإنترنت. تسعى دائماً لتطوير مهاراتها وتقديم أفضل الخدمات.</p>
         </section>
 
         <section id="contact" class="section animate__animated animate__fadeInUp">
-            <h2><i class="fas fa-phone icon"></i> اتصل بنا</h2>
-            <p>تواصل معنا اليوم للحصول على المزيد من المعلومات حول خدماتنا وكيف يمكننا مساعدتك في تحقيق أهدافك.</p>
-            <button>تواصل معنا</button>
+            <h2><i class="fas fa-envelope icon"></i> اتصل بنا</h2>
+            <p>للمزيد من المعلومات أو للاستفسار، لا تتردد في التواصل معنا عبر البريد الإلكتروني أو الهاتف.</p>
+            <button>اتصل الآن</button>
         </section>
 
         <section id="sitemap" class="section animate__animated animate__fadeInUp">
             <h2><i class="fas fa-sitemap icon"></i> خريطة الموقع</h2>
-            <p>استعرض خريطة الموقع للتعرف على كافة الأقسام والصفحات التي نقدمها لك.</p>
-            <button>استعرض الخريطة</button>
-        </section>
-
-        <!-- إحصائيات الزوار -->
-        <section class="section animate__animated animate__fadeInUp">
-            <h2><i class="fas fa-chart-line icon"></i> إحصائيات الموقع</h2>
-            <div class="statistics-container">
-                <div class="statistic">
-                    <div class="statistic-number">124,9</div>
-                    <div>عدد الزوار</div>
-                </div>
-                <div class="statistic">
-                    <div class="statistic-number">23,4</div>
-                    <div>عدد المشتركين</div>
-                </div>
-                <div class="statistic">
-                    <div class="statistic-number">848,2</div>
-                    <div>عدد الزيارات</div>
-                </div>
-            </div>
+            <p>استعرض خريطة الموقع للحصول على نظرة شاملة حول الأقسام والمحتوى المتاح.</p>
         </section>
     </div>
-    
+
     <footer>
+        <p>جميع الحقوق محفوظة &copy; 2024 منية البناء</p>
         <div class="social-icons">
-            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
             <a href="#"><i class="fab fa-twitter"></i></a>
             <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
         </div>
-        <p>حقوق الطبع © 2024 إدارة الإنترنت - منية البناء. جميع الحقوق محفوظة.</p>
     </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
